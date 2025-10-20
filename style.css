@@ -1,8 +1,8 @@
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
-  background: #002147; /* deep navy background */
-  color: #D2B48C; /* gold-tan text */
+  background: #002147;
+  color: #D2B48C; 
 }
 
 /* NAVBAR */
@@ -50,7 +50,7 @@ body {
   cursor: pointer;
 }
 
-/* HERO SECTION */
+/* HOME */
 .hero {
   position: relative;
   width: 100%;
@@ -87,7 +87,7 @@ body {
 }
 
 .btn:hover {
-  background: #ffffff;
+  background: #bfa26a;
   color: #002147;
 }
 
@@ -97,8 +97,101 @@ body {
   background-color: #001a36;
   color: #D2B48C;
 }
+/* ABOUT */
+.about {
+  background-color: #002147; 
+  color: #f8f8f8;
+  padding: 5rem 2rem;
+}
 
-/* --- Product Carousel Styles --- */
+.about-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.about-header h2 {
+  font-size: 2.5rem;
+  color: #D2B48C;
+  margin-bottom: 0.5rem;
+}
+
+.about-header p {
+  font-style: italic;
+  color: #f0f0f0;
+}
+
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin: 3rem 0;
+  flex-wrap: wrap;
+  background-color: #001a35;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.about-section.right {
+  flex-direction: row;
+}
+
+.about-section.left {
+  flex-direction: row-reverse;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 280px;
+  max-width: 500px;
+}
+
+.about-text h3 {
+  font-size: 1.5rem;
+  color: #D2B48C;
+  margin-bottom: 0.8rem;
+}
+
+.about-text p {
+  color: #f5f5f5;
+  line-height: 1.7;
+}
+
+.about-section {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  margin: 2.5rem 0;
+  flex-wrap: wrap;
+  padding: 1.5rem;
+  background-color: #001a35;
+  border-radius: 12px;
+}
+
+.about-section .about-img {
+  opacity: 0;
+  visibility: hidden;
+  will-change: transform, opacity;
+  transition: transform 0.9s cubic-bezier(.2,.9,.2,1), opacity 0.9s ease;
+}
+.about-section.right .about-img  { transform: translateX(220px); }
+.about-section.left  .about-img  { transform: translateX(-220px); }
+
+.about-section .about-img.visible {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.about-img img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(210,180,140,0.28);
+}
+
+
+/* PRODUCT */
 .carousel {
   position: relative;
   width: 100%;
@@ -144,7 +237,6 @@ body {
   right: 10px;
 }
 
-/* PRODUCT GRID */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -169,7 +261,7 @@ body {
   border-radius: 12px 12px 0 0;
 }
 
-/* CONTACT FORM */
+/* CONTACT */
 .contact-form {
   background-color: #001a36;
   padding: 60px 20px;
@@ -311,8 +403,107 @@ body {
   transform: scale(1.15);
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
+/* TABLET VIEWPORT */
+@media (max-width: 1024px) and (min-width: 481px) {
+
+  body {
+    font-size: 0.95rem;
+  }
+
+  .navbar {
+    padding: 0.8rem 1.5rem;
+  }
+
+  .nav-brand {
+    font-size: 1.3rem;
+  }
+
+  .nav-links {
+    gap: 1.2rem;
+  }
+
+  /* HOME */
+  .hero img {
+    width: 100%;
+  }
+
+ .hero-overlay {
+    top: 40%;
+    left: 17%;
+    transform: translate(-50%, -50%);
+  }
+
+  .btn {
+    background: #D2B48C; 
+    color: #002147;
+    padding: 0.5rem 1.2rem; 
+    border-radius: 30px;
+    font-size: 0.75rem;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.2s;
+  }
+
+  .btn:hover {
+    background: #bfa26a;
+    color: #002147;
+  }
+
+  /* ABOUT */
+  .about {
+    padding: 3rem 1.5rem;
+  }
+
+  .about-header h2 {
+    font-size: 2rem;
+  }
+
+  .about-text h3 {
+    font-size: 1.3rem;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+  }
+
+  .about-section {
+    gap: 1.5rem;
+    padding: 1.2rem;
+  }
+
+  .about-img img {
+    max-width: 400px;
+  }
+
+  /* PRODUCT */
+  .page-section {
+    padding: 3rem 1rem;
+  }
+
+  .product-grid {
+    gap: 1.5rem;
+  }
+
+  .product-card h3 {
+    font-size: 1rem;
+  }
+
+  /* CONTACT */
+  .contact-form h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact-form p {
+    font-size: 0.9rem;
+  }
+
+  /* FOOTER */
+  .footer {
+    padding: 15px 20px;
+  }
+}
+
+/* MOBILE VIEWPORT */
+@media (max-width: 480px) {
   .nav-links {
     display: none;
     flex-direction: column;
@@ -331,5 +522,78 @@ body {
 
   .hamburger {
     display: block;
+  } 
+
+  /* ABOUT */
+  .about-section .about-img {
+    display: none;
+  }
+
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .about-text {
+    max-width: 100%;
+  }
+
+  .about-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-text h3 {
+    font-size: 1.1rem;
+  }
+
+  .about-text p {
+    font-size: 0.9rem;
+  }
+
+  .hero-overlay {
+    top: 45%;
+    left: 23%;
+    transform: translate(-50%, -50%);
+  }
+
+  .btn {
+    background: #D2B48C; 
+    color: #002147;
+    padding: 0.5rem 1.2rem; 
+    border-radius: 30px;
+    font-size: 0.5rem;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.2s;
+  }
+
+  .btn:hover {
+    background: #bfa26a;
+    color: #002147;
+  }
+
+  /* PRODUCTS */
+  .product-card {
+    max-width: 95%;
+    margin: 0 auto;
+  }
+
+  /* CONTACT */
+  .contact-form {
+    padding: 2.5rem 1rem;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+  /* FOOTER */
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .social-icons {
+    justify-content: center;
   }
 }

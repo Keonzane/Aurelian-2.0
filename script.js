@@ -12,9 +12,28 @@ if (fileInput && fileLabel) {
 const phoneInput = document.querySelector('input[type="tel"]');
 if (phoneInput) {
   phoneInput.addEventListener("input", () => {
-    phoneInput.value = phoneInput.value.replace(/[^0-9]/g, ""); // remove non-numeric characters
+    phoneInput.value = phoneInput.value.replace(/[^0-9]/g, "");
   });
 }
+
+(function() {
+  const aboutImgs = document.querySelectorAll('.about-img');
+
+  if (!aboutImgs.length) return;
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      } else {
+        entry.target.classList.remove('visible'); 
+      }
+    });
+  }, { threshold: 0.3 });
+
+  aboutImgs.forEach(img => observer.observe(img));
+})();
+
 
 // Mobile navbar toggle
 const hamburger = document.getElementById('hamburger');
