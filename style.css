@@ -536,7 +536,7 @@ body {
   }
 
   .about-text {
-    max-width: 100%;
+    max-width: 90%;
   }
 
   .about-header h2 {
@@ -552,17 +552,17 @@ body {
   }
 
   .hero-overlay {
-    top: 45%;
-    left: 23%;
+    top: 41%;
+    left: 20%;
     transform: translate(-50%, -50%);
   }
 
   .btn {
     background: #D2B48C; 
     color: #002147;
-    padding: 0.5rem 1.2rem; 
+    padding: 0.4rem 0.9rem; 
     border-radius: 30px;
-    font-size: 0.5rem;
+    font-size: 0.4rem;
     text-decoration: none;
     transition: background 0.3s, transform 0.2s;
   }
