@@ -127,7 +127,7 @@ body {
   gap: 3rem;
   margin: 3rem 0;
   flex-wrap: wrap;
-  background-color: #001a35;
+  background-color: #001a36;
   border-radius: 16px;
   padding: 2rem;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
@@ -429,7 +429,7 @@ body {
 
  .hero-overlay {
     top: 40%;
-    left: 17%;
+    left: 19.5%;
     transform: translate(-50%, -50%);
   }
 
