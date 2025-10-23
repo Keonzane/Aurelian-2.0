@@ -597,3 +597,102 @@ body {
     justify-content: center;
   }
 }
+
+/* PRINT STYLES */
+@media print {
+  .navbar,
+  .hero,
+  .btn,
+  .carousel button,
+  .hamburger,
+  .footer,
+  .social-icons,
+  #contact {
+    display: none !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 12pt;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #000000 !important;
+  }
+
+  /* ABOUT SECTION */
+  .about {
+    background: none !important;
+    color: #000 !important;
+    page-break-before: avoid;
+    page-break-after: avoid !important;
+    page-break-inside: avoid !important;
+    margin: 0 auto;
+    padding: 20px 40px;
+  }
+
+  .about-section {
+    page-break-inside: avoid;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .about-img {
+    display: none !important;
+  }
+
+  /* PRODUCT SECTION */
+  #products {
+    page-break-before: avoid !important;
+    page-break-after: avoid !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    margin-top: -20px !important;
+    padding: 20px 40px;
+  }
+
+  /* PRODUCT GRID */
+  .product-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px; 
+    margin-top: 0 !important;
+    page-break-before: avoid !important;
+    page-break-after: avoid !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  /* PRODUCT CARD */
+  .product-card {
+    background: none !important;
+    box-shadow: none !important;
+    border: 1px solid #000 !important;
+    padding: 6px;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .product-card img {
+    width: 100%;
+    border-radius: 0;
+    display: block !important;
+  }
+
+  .product-card h3 {
+    text-align: center;
+    color: #000 !important;
+    font-size: 11pt; 
+  }
+
+  .product-category {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    margin-bottom: 10px;
+  }
+}
